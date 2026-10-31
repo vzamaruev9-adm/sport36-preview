@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#102a43">
+
+    <title>СПОРТ 36 — Минспорт Воронежской области</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- MAX Bridge -->
+    <script src="https://st.max.ru/js/max-web-app.js"></script>
+
+    <!-- Интерактивность приложения -->
+    <script src="./interactions.js" defer></script>
+</head>
+
+<body>
+
+    <main class="app">
+
+
+
+        <!-- ГЛАВНАЯ СТРАНИЦА -->
+        <section id="home-page">
+
+            <!-- ГЛАВНЫЙ БАННЕР -->
+            <section class="hero">
+
+                <div class="hero-tag">
+                    СПОРТ · РЕГИОН · ВОЗМОЖНОСТИ
+                </div>
+
+                <h1>СПОРТ 36</h1>
+
+                <h2>
+                    Развиваем спорт
+                    в Воронежской области
+                </h2>
+
+                <p>
+                    Поддержка спортсменов, развитие физической
+                    культуры и спортивной инфраструктуры региона.
+                </p>
+
+                <button class="hero-button" id="appointment-button">
+                    <span>📋 Записаться на приём к министру</span>
+                    <span>→</span>
+                </button>
+
+            </section>
+
+
+            <!-- РАЗДЕЛЫ МИНИСТЕРСТВА -->
+            <section class="content">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>Наши направления</h2>
+
+                        <p>
+                            Выберите интересующий раздел
+                        </p>
+                    </div>
+
+                    <div class="section-count">
+                        11 разделов
+                    </div>
+
+                </div>
+
+
+                <!-- ПОИСК -->
+                <div class="search-box">
+
+                    <span>🔎</span>
+
+                    <input
+                        type="search"
+                        id="search-input"
+                        placeholder="Найти нужный раздел..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <!-- КАРТОЧКИ СОЗДАЮТСЯ ЧЕРЕЗ JAVASCRIPT -->
+                <div class="cards-grid" id="section-grid">
+                </div>
+
+
+                <!-- ЕСЛИ НИЧЕГО НЕ НАЙДЕНО -->
+                <p class="empty-message" id="empty-message" hidden>
+                    По вашему запросу ничего не найдено.
+                </p>
+
+            </section>
+
+        </section>
+
+
+        <!-- ВНУТРЕННЯЯ СТРАНИЦА РАЗДЕЛА -->
+        <section class="detail-page" id="detail-page" hidden>
+
+            <button class="back-button" id="back-button">
+                ← Назад к разделам
+            </button>
+
+            <div class="detail-card">
+
+                <div class="detail-icon" id="detail-icon">
+                    🏅
+                </div>
+
+                <div class="detail-label">
+                    РАЗДЕЛ МИНИСТЕРСТВА
+                </div>
+
+                <h2 id="detail-title">
+                    Название раздела
+                </h2>
+
+                <p id="detail-description">
+                    Описание раздела.
+                </p>
+
+                <div class="detail-note">
+                    Информация и интерактивные функции этого
+                    раздела будут подключены на следующих этапах.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ПОДВАЛ -->
+        <footer class="footer">
+
+            <div>СПОРТ 36</div>
+
+            <p>
+                Министерство физической культуры и спорта
+            </p>
+
+            <p>
+                Воронежской области
+            </p>
+
+        </footer>
+
+    </main>
+
+</body>
+</html>

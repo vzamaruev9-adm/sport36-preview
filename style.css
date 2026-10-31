@@ -1,0 +1,667 @@
+
+/* =================================
+   СПОРТ 36 — ОСНОВНОЙ СТИЛЬ
+================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eef3f8;
+    color: #102a43;
+    min-height: 100vh;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* =================================
+   ОСНОВНОЙ КОНТЕЙНЕР
+================================= */
+
+.app {
+    max-width: 1100px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: #f8fafc;
+    box-shadow: 0 0 35px rgba(16, 42, 67, 0.08);
+}
+
+/* =================================
+   ВЕРХНЯЯ ШАПКА
+================================= */
+
+.header {
+    padding: 27px 30px 23px;
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #102a43,
+        #1769aa
+    );
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.brand-logo {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.15);
+
+    font-size: 31px;
+}
+
+.brand-name {
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.brand-subtitle {
+    margin-top: 5px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #c5e2f8;
+}
+
+.header-label {
+    margin-top: 20px;
+    color: #c5e2f8;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+/* =================================
+   ПРИВЕТСТВЕННЫЙ БЛОК
+================================= */
+
+.hero {
+    margin: 24px;
+    padding: 32px 28px;
+
+    border-radius: 22px;
+    color: white;
+
+    background: linear-gradient(
+        120deg,
+        #1052a0,
+        #2386c8
+    );
+
+    box-shadow: 0 12px 28px rgba(35, 134, 200, 0.2);
+}
+
+.hero-tag {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #d5ebff;
+}
+
+.hero h1 {
+    margin-top: 16px;
+    font-size: 30px;
+}
+
+.hero p {
+    max-width: 500px;
+    margin-top: 12px;
+    line-height: 1.6;
+    color: #e3f1fc;
+    font-size: 15px;
+}
+
+.hero-button {
+    width: 100%;
+    max-width: 390px;
+
+    margin-top: 24px;
+    padding: 16px 19px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: none;
+    border-radius: 12px;
+
+    background: white;
+    color: #1769aa;
+    font-weight: 700;
+
+    transition: 0.2s ease;
+}
+
+.hero-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* =================================
+   ОСНОВНОЙ РАЗДЕЛ
+================================= */
+
+.content {
+    padding: 5px 24px 30px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.section-heading h2 {
+    font-size: 22px;
+}
+
+.section-heading p {
+    margin-top: 6px;
+    color: #718096;
+    font-size: 14px;
+}
+
+.section-count {
+    white-space: nowrap;
+    padding: 9px 12px;
+    border-radius: 20px;
+
+    background: #e5eff8;
+    color: #1769aa;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* =================================
+   ПОИСК
+================================= */
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    padding: 15px 17px;
+    margin-bottom: 19px;
+
+    background: white;
+    border: 1px solid #e1e8ef;
+    border-radius: 13px;
+}
+
+.search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+
+    background: transparent;
+    color: #102a43;
+
+    font-size: 14px;
+}
+
+.search-box:focus-within {
+    border-color: #2386c8;
+    box-shadow: 0 0 0 3px rgba(35, 134, 200, 0.1);
+}
+
+/* =================================
+   СЕТКА КАРТОЧЕК
+================================= */
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+/* =================================
+   КАРТОЧКИ РАЗДЕЛОВ
+================================= */
+
+.section-card {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 180px;
+    padding: 18px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    text-align: left;
+
+    border: 1px solid rgba(190, 210, 230, 0.4);
+    border-radius: 18px;
+
+    background: white;
+    color: #102a43;
+
+    box-shadow: 0 5px 16px rgba(16, 42, 67, 0.05);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.section-card:hover {
+    transform: translateY(-4px);
+    border-color: #9bc8e8;
+
+    box-shadow: 0 12px 25px rgba(16, 42, 67, 0.12);
+}
+
+.section-card:active {
+    transform: scale(0.97);
+}
+
+.section-card:focus-visible {
+    outline: 3px solid #2386c8;
+    outline-offset: 3px;
+}
+
+/* Цветные карточки */
+
+.section-card:nth-child(6n+1) {
+    background: linear-gradient(135deg, #e2efff, #f1f7ff);
+}
+
+.section-card:nth-child(6n+2) {
+    background: linear-gradient(135deg, #fff0e9, #fff7ee);
+}
+
+.section-card:nth-child(6n+3) {
+    background: linear-gradient(135deg, #e1f8e9, #f0fff4);
+}
+
+.section-card:nth-child(6n+4) {
+    background: linear-gradient(135deg, #eee5ff, #f8f3ff);
+}
+
+.section-card:nth-child(6n+5) {
+    background: linear-gradient(135deg, #fff3d8, #fffaf0);
+}
+
+.section-card:nth-child(6n) {
+    background: linear-gradient(135deg, #def5fa, #effcff);
+}
+
+/* Иконки */
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.78);
+
+    font-size: 25px;
+}
+
+/* Названия разделов */
+
+.card-title {
+    margin-top: 13px;
+
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.4;
+
+    color: #102a43;
+}
+
+/* Описания разделов */
+
+.card-description {
+    margin-top: 8px;
+
+    font-size: 12px;
+    line-height: 1.5;
+
+    color: #526579;
+}
+
+/* Стрелки */
+
+.card-arrow {
+    align-self: flex-end;
+    margin-top: auto;
+    padding-top: 8px;
+
+    color: #1769aa;
+    font-size: 21px;
+    font-weight: bold;
+
+    transition: transform 0.2s ease;
+}
+
+.section-card:hover .card-arrow {
+    transform: translate(3px, -3px);
+}
+
+/* =================================
+   ВНУТРЕННИЕ СТРАНИЦЫ
+================================= */
+
+.detail-page {
+    padding: 24px;
+}
+
+.back-button {
+    padding: 12px 17px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #e5eff8;
+    color: #1769aa;
+
+    font-weight: 700;
+}
+
+.back-button:hover {
+    background: #d7eafb;
+}
+
+.detail-card {
+    margin-top: 22px;
+    padding: 28px;
+
+    border-radius: 20px;
+    background: white;
+
+    box-shadow: 0 5px 20px rgba(16, 42, 67, 0.06);
+}
+
+.detail-icon {
+    width: 68px;
+    height: 68px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+    background: #eaf3fb;
+
+    font-size: 35px;
+}
+
+.detail-label {
+    margin-top: 22px;
+
+    color: #2386c8;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+}
+
+.detail-card h2 {
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+.detail-card p {
+    margin-top: 13px;
+
+    color: #526579;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.detail-note {
+    margin-top: 25px;
+    padding: 17px;
+
+    border-radius: 12px;
+    background: #eef5fb;
+
+    color: #526579;
+    line-height: 1.5;
+    font-size: 13px;
+}
+
+/* =================================
+   СООБЩЕНИЕ: НИЧЕГО НЕ НАЙДЕНО
+================================= */
+
+.empty-message {
+    padding: 25px 5px;
+    color: #718096;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* =================================
+   НИЖНЯЯ ЧАСТЬ
+================================= */
+
+.footer {
+    padding: 25px 15px;
+
+    text-align: center;
+    color: #718096;
+
+    background: #edf3f8;
+
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.footer div {
+    color: #1769aa;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+/* =================================
+   ПЛАНШЕТЫ
+================================= */
+
+@media (max-width: 850px) {
+    .app {
+        max-width: 100%;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* =================================
+   ТЕЛЕФОНЫ
+================================= */
+
+@media (max-width: 600px) {
+    .header {
+        padding: 20px 17px;
+    }
+
+    .brand-name {
+        font-size: 23px;
+    }
+
+    .hero {
+        margin: 15px;
+        padding: 23px 18px;
+    }
+
+    .hero h1 {
+        font-size: 25px;
+    }
+
+    .content {
+        padding: 5px 15px 25px;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .section-card {
+        min-height: 170px;
+        padding: 13px;
+    }
+
+    .card-icon {
+        width: 43px;
+        height: 43px;
+        font-size: 23px;
+    }
+
+    .card-title {
+        font-size: 12px;
+    }
+
+    .card-description {
+        font-size: 11px;
+    }
+
+    .section-heading h2 {
+        font-size: 19px;
+    }
+
+    .section-count {
+        font-size: 10px;
+    }
+
+    .detail-page {
+        padding: 17px;
+    }
+
+    .detail-card {
+        padding: 21px;
+    }
+}
+
+/* =================================
+   ОЧЕНЬ УЗКИЕ ЭКРАНЫ
+================================= */
+
+@media (max-width: 350px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* =================================
+   ЕДИНЫЙ СТИЛЬ БАННЕРА СПОРТ 36
+================================= */
+
+#home-page .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    min-height: 300px;
+    margin: 24px;
+    padding: 36px;
+
+    border: none;
+    border-radius: 22px;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(105, 190, 255, 0.3),
+            transparent 35%
+        ),
+        linear-gradient(120deg, #103d78, #087fc4);
+
+    color: #ffffff;
+    box-shadow: 0 12px 28px rgba(35, 134, 200, 0.2);
+}
+
+#home-page .hero-tag {
+    color: #d3eaff;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+#home-page .hero h1 {
+    margin-top: 20px;
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+#home-page .hero h2 {
+    max-width: 600px;
+    margin-top: 10px;
+    color: #ffffff;
+    font-size: 25px;
+    line-height: 1.3;
+}
+
+#home-page .hero p {
+    max-width: 580px;
+    margin-top: 14px;
+    color: #e1efff;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+#home-page .hero .hero-button {
+    width: 100%;
+    max-width: 390px;
+    margin-top: 24px;
+    padding: 16px 18px;
+
+    background: #ffffff;
+    color: #12569a;
+    border-radius: 12px;
+}
+
+@media (max-width: 600px) {
+    #home-page .hero {
+        min-height: 270px;
+        margin: 15px;
+        padding: 24px 20px;
+    }
+
+    #home-page .hero h1 {
+        font-size: 36px;
+    }
+
+    #home-page .hero h2 {
+        font-size: 21px;
+    }
+}
